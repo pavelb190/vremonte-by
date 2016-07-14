@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>by.team.projects</groupId>
+    <artifactId>vremonte-by</artifactId>
+    <version>1.0-SNAPSHOT</version>
+  </parent>
+  <groupId>by.team.projects.vremonte-by</groupId>
+  <artifactId>dal</artifactId>
+  <packaging>pom</packaging>
+  <version>1.0-SNAPSHOT</version>
+  <name>dal</name>
+  <url>http://maven.apache.org</url>
+  <dependencies>
+    <!-- Dependencies are here! -->
+  </dependencies>
+  <modules>
+    <module>Entity</module>
+    <module>Dao</module>
+    <module>Services</module>
+  </modules>
+</project>
