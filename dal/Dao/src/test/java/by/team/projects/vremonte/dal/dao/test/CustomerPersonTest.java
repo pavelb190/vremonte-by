@@ -29,7 +29,7 @@ public class CustomerPersonTest implements ApplicationContextAware {
 		
 			CustomerPerson customer = new CustomerPerson();
 			
-				customer.setEmail("pavela@profiserv.com");
+				customer.setEmail("ivan@team.by");
 				
 					customer.getDetails().setFirstName("Ivan");
 		
