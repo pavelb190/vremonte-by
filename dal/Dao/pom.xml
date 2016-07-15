@@ -9,10 +9,17 @@
   </parent>
   <groupId>by.team.projects.vremonte-by.dal</groupId>
   <artifactId>Dao</artifactId>
-  <version>1.0-SNAPSHOT</version>
   <name>Dao</name>
   <url>http://maven.apache.org</url>
   <dependencies>
+  	<dependency>
+  	  <groupId>org.hibernate</groupId>
+  	  <artifactId>hibernate-entitymanager</artifactId>
+  	</dependency>
+  	<dependency>
+  	  <groupId>mysql</groupId>
+  	  <artifactId>mysql-connector-java</artifactId>
+  	</dependency>
     <dependency>
       <groupId>by.team.projects.vremonte-by.dal</groupId>
       <artifactId>Entity</artifactId>
