@@ -1,14 +1,9 @@
 package by.team.projects.vremonte.dal.dao.test;
 
-import java.sql.SQLException;
-
-import javax.sql.DataSource;
-
 import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.BeansException;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 import org.springframework.test.context.ContextConfiguration;
@@ -16,23 +11,36 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.support.AnnotationConfigContextLoader;
 import org.springframework.util.Assert;
 
+import by.team.projects.vremonte.dal.dao.CustomerOrganizationRepository;
 import by.team.projects.vremonte.dal.dao.config.DaoConfiguration;
+import by.team.projects.vremonte.dal.entity.CustomerOrganization;
 
 @Ignore
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = DaoConfiguration.class, loader = AnnotationConfigContextLoader.class)
-public class DaoTest implements ApplicationContextAware {
+public class CustomerOrganizationTest implements ApplicationContextAware {
 
-	@Autowired
-	private DataSource dataSource;
-	
 	private ApplicationContext ctxt;
 	
 	@Test
-	public void testDBConnection() throws SQLException {
+	public void testCreateCustomerOrganization() {
 		
-		Assert.notNull(dataSource.getConnection(), "Couldn't create a DBConnection!");
-	}	
+		CustomerOrganizationRepository customerRepo = ctxt.getBean(CustomerOrganizationRepository.class);
+		
+			CustomerOrganization customer = new CustomerOrganization();
+			
+				customer.setEmail("info@team.by");
+		
+					customer.getDetails().setName("TEAM");
+					customer.getDetails().setUnpNo("123456789");
+					customer.getDetails().setPhoneNumber("+37517-123-45-67");
+				
+			customer = customerRepo.save(customer);
+				
+			System.out.println("\t[Created customer Organization is: " + customer + "]");
+			
+		Assert.notNull(customer, "Couldn't create a new Customer!");
+	}
 	
 	@Override
 	public void setApplicationContext(ApplicationContext context) throws BeansException {
