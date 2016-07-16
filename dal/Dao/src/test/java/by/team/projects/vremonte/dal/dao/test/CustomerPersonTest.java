@@ -13,7 +13,10 @@ import org.springframework.util.Assert;
 
 import by.team.projects.vremonte.dal.dao.CustomerPersonRepository;
 import by.team.projects.vremonte.dal.dao.config.DaoConfiguration;
-import by.team.projects.vremonte.dal.entity.CustomerPerson;
+import by.team.projects.vremonte.dal.entity.user.RolesType;
+import by.team.projects.vremonte.dal.entity.user.customer.CustomerPerson;
+import by.team.projects.vremonte.dal.entity.user.factory.UserFactoryProducer;
+import by.team.projects.vremonte.dal.entity.user.factory.UserFactory.UserType;
 
 @Ignore
 @RunWith(SpringJUnit4ClassRunner.class)

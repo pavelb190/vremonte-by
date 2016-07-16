@@ -13,7 +13,7 @@ import org.springframework.util.Assert;
 
 import by.team.projects.vremonte.dal.dao.CustomerOrganizationRepository;
 import by.team.projects.vremonte.dal.dao.config.DaoConfiguration;
-import by.team.projects.vremonte.dal.entity.CustomerOrganization;
+import by.team.projects.vremonte.dal.entity.user.customer.CustomerOrganization;
 
 @Ignore
 @RunWith(SpringJUnit4ClassRunner.class)

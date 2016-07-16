@@ -1,16 +1,16 @@
-package by.team.projects.vremonte.dal.entity;
+package by.team.projects.vremonte.dal.entity.user.customer;
 
 import javax.persistence.Embedded;
 import javax.persistence.Entity;
 import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Table;
 
-import by.team.projects.vremonte.dal.entity.details.PersonDetails;
+import by.team.projects.vremonte.dal.entity.user.details.OrganizationDetails;
 
 @Entity
-@Table(name = "Persons")
+@Table(name = "Organizations")
 @PrimaryKeyJoinColumn(name = "user_id")
-public class CustomerPerson extends Customer {
+public class CustomerOrganization extends Customer {
 
 	/**
 	 * 
@@ -18,19 +18,19 @@ public class CustomerPerson extends Customer {
 	private static final long serialVersionUID = 1L;
 
 	@Embedded
-	private PersonDetails details;
+	private OrganizationDetails details;
 	
-	public PersonDetails getDetails() {
+	public OrganizationDetails getDetails() {
 		
 		if (details == null) {
 			
-			this.details = new PersonDetails();
+			this.details = new OrganizationDetails();
 		}
 		
 		return details;
 	}
 	
-	public void setDetails(PersonDetails details) {
+	public void setDetails(OrganizationDetails details) {
 		
 		this.details = details;
 	}
@@ -38,7 +38,7 @@ public class CustomerPerson extends Customer {
 	@Override
 	public String toString() {
 		
-		return "CustomerPerson{"
+		return "CustomerOrganization{"
 				+ super.toString() + " " + this.details + "}";
 	}
 }

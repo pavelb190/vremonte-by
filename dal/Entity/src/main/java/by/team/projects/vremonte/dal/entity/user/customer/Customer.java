@@ -1,6 +1,9 @@
-package by.team.projects.vremonte.dal.entity;
+package by.team.projects.vremonte.dal.entity.user.customer;
 
 import javax.persistence.MappedSuperclass;
+
+import by.team.projects.vremonte.dal.entity.user.RolesType;
+import by.team.projects.vremonte.dal.entity.user.User;
 
 @MappedSuperclass
 public abstract class Customer extends User {

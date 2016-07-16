@@ -1,9 +1,12 @@
-package by.team.projects.vremonte.dal.entity;
+package by.team.projects.vremonte.dal.entity.user.builder;
 
 import java.util.HashSet;
 import java.util.Set;
 
 import javax.persistence.MappedSuperclass;
+
+import by.team.projects.vremonte.dal.entity.user.RolesType;
+import by.team.projects.vremonte.dal.entity.user.User;
 
 @MappedSuperclass
 public abstract class Builder extends User {

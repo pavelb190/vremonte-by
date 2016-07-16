@@ -1,4 +1,4 @@
-package by.team.projects.vremonte.dal.entity.details;
+package by.team.projects.vremonte.dal.entity.user.details;
 
 import java.io.Serializable;
 

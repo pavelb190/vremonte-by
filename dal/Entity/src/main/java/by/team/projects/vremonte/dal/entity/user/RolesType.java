@@ -1,4 +1,4 @@
-package by.team.projects.vremonte.dal.entity;
+package by.team.projects.vremonte.dal.entity.user;
 
 public enum RolesType {
 	

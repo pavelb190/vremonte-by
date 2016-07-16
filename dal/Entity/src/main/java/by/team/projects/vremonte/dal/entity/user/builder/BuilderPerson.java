@@ -1,10 +1,10 @@
-package by.team.projects.vremonte.dal.entity;
+package by.team.projects.vremonte.dal.entity.user.builder;
 
 import javax.persistence.Entity;
 import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Table;
 
-import by.team.projects.vremonte.dal.entity.details.PersonDetails;
+import by.team.projects.vremonte.dal.entity.user.details.PersonDetails;
 
 @Entity
 @Table(name = "Persons")

@@ -1,29 +1,22 @@
-package by.team.projects.vremonte.dal.entity;
-
-import java.io.Serializable;
+package by.team.projects.vremonte.dal.entity.user.builder;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
+import by.team.projects.vremonte.dal.entity.Model;
+
 @Entity
 @Table(name = "Skills")
-public class Skill implements Serializable {
+public class Skill extends Model<Long> {
 
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-
-	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	private Long id;
 	
 	@Column(name = "skill_name", unique = true, nullable = false)
 	private String skillName;
@@ -33,16 +26,6 @@ public class Skill implements Serializable {
 	private Skill parentSkill;
 	
 	public Skill() {}
-	
-	public Long getId() {
-		
-		return id;
-	}
-	
-	public void setId(Long id) {
-		
-		this.id = id;
-	}
 	
 	public String getSkillName() {
 		
@@ -67,7 +50,7 @@ public class Skill implements Serializable {
 	@Override
 	public int hashCode() {
 		
-		return 31 * this.id.hashCode();
+		return 31 * getId().hashCode();
 	}
 	
 	// TODO: equals method.
@@ -75,6 +58,6 @@ public class Skill implements Serializable {
 	@Override
 	public String toString() {
 		
-		return "Skill{" + this.id + " " + this.skillName + " " + this.parentSkill + "}";
+		return "Skill{" + getId() + " " + this.skillName + " " + this.parentSkill + "}";
 	}
 }
