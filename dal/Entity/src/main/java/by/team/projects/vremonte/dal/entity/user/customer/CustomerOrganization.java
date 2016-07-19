@@ -5,21 +5,23 @@ import javax.persistence.Entity;
 import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Table;
 
+import by.team.projects.vremonte.dal.entity.user.details.Organization;
 import by.team.projects.vremonte.dal.entity.user.details.OrganizationDetails;
 
 @Entity
 @Table(name = "Organizations")
 @PrimaryKeyJoinColumn(name = "user_id")
-public class CustomerOrganization extends Customer {
+public class CustomerOrganization extends Customer implements Organization {
 
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-
+	
 	@Embedded
 	private OrganizationDetails details;
 	
+	@Override
 	public OrganizationDetails getDetails() {
 		
 		if (details == null) {

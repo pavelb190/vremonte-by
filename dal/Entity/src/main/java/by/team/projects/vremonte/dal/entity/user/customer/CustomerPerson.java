@@ -5,12 +5,13 @@ import javax.persistence.Entity;
 import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Table;
 
+import by.team.projects.vremonte.dal.entity.user.details.Person;
 import by.team.projects.vremonte.dal.entity.user.details.PersonDetails;
 
 @Entity
 @Table(name = "Persons")
 @PrimaryKeyJoinColumn(name = "user_id")
-public class CustomerPerson extends Customer {
+public class CustomerPerson extends Customer implements Person {
 
 	/**
 	 * 
@@ -20,6 +21,7 @@ public class CustomerPerson extends Customer {
 	@Embedded
 	private PersonDetails details;
 	
+	@Override
 	public PersonDetails getDetails() {
 		
 		if (details == null) {

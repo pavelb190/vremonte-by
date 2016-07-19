@@ -1,5 +1,7 @@
 package by.team.projects.vremonte.dal.entity.user.builder;
 
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
