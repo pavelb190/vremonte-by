@@ -11,8 +11,8 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.support.AnnotationConfigContextLoader;
 import org.springframework.util.Assert;
 
-import by.team.projects.vremonte.dal.dao.CustomerPersonRepository;
 import by.team.projects.vremonte.dal.dao.config.DaoConfiguration;
+import by.team.projects.vremonte.dal.dao.customer.CustomerPersonRepository;
 import by.team.projects.vremonte.dal.entity.user.RolesType;
 import by.team.projects.vremonte.dal.entity.user.customer.CustomerPerson;
 

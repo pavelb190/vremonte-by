@@ -1,4 +1,4 @@
-package by.team.projects.vremonte.dal.dao;
+package by.team.projects.vremonte.dal.dao.customer;
 
 import org.springframework.data.repository.CrudRepository;
 

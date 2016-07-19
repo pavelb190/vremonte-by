@@ -10,7 +10,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.support.AnnotationConfigContextLoader;
 import org.springframework.util.Assert;
 
-import by.team.projects.vremonte.dal.dao.SkillRepository;
+import by.team.projects.vremonte.dal.dao.builder.SkillRepository;
 import by.team.projects.vremonte.dal.dao.config.DaoConfiguration;
 import by.team.projects.vremonte.dal.entity.user.builder.Skill;
 
